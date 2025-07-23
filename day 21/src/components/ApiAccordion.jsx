@@ -8,7 +8,7 @@ const ApiAccordion = () => {
   const [error, setError] = useState(null);
   const [activeIndex, setActiveIndex] = useState(null); // Для простого поведения аккордеона
   const apiKey = '86c707ee8df7a15e2ea7a98b25b2e096'; // API ключ
-  const city = 'Москва'; // Можете изменить на необходимый город
+  const city = 'Москва'; // Можно изменить на необходимый город
 
   useEffect(() => {
     const fetchWeather = async () => {

@@ -43,7 +43,7 @@ const LazyAccordionItem = ({ title, itemIndex, isOpen, onToggle }) => {
       </div>
       <div
         className={`accordion-content ${isOpen ? 'open' : ''}`}
-        style={{ maxHeight: isOpen ? '200px' : '0' }} // Установите подходящую max-height
+        style={{ maxHeight: isOpen ? '200px' : '0' }}
       >
         <div className="accordion-content-inner">
           {isLoading && <div className="loader">Загрузка контента...</div>}
