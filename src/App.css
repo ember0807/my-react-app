@@ -1,38 +1,77 @@
+/* Общие стили для App */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  
 }
 
 .App-header {
+  /* Сохраняем стили заголовка, но убираем min-height, чтобы он не занимал весь экран */
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 20px 0; /* Добавим отступы */
   font-size: calc(10px + 2vmin);
   color: white;
+  min-height: auto; /* Важно: убираем, чтобы контент не занимал 100% высоты */
 }
 
-.App-link {
-  color: #61dafb;
+/* Стили для контейнера сетки */
+.components-grid {
+  display: grid;
+  /* Определяем 3 колонки одинаковой ширины */
+  grid-template-columns: repeat(2, 1fr);
+  /* Задаем расстояние между ячейками */
+  gap: 20px;
+  /* Центрируем сетку на странице */
+  max-width: 960px; /* Максимальная ширина сетки (3 * ~300px + 2 * 20px) */
+  margin: 40px auto; /* Отступ сверху/снизу и центрирование по горизонтали */
+  padding: 20px; /* Внутренние отступы, если сетка прилегает к краям */
+  box-sizing: border-box; /* padding не увеличивает общую ширину */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Медиа-запросы для адаптивности: если экран слишком узок для 3 колонок */
+@media (max-width: 992px) {
+  .components-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на средних экранах */
+    max-width: 660px; /* 2 * ~300px + 1 * 20px */
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .components-grid {
+    grid-template-columns: 1fr; /* 1 колонка на маленьких экранах */
+    max-width: 360px; /* 1 * ~300px + 0 * 20px */
   }
+}
+
+/* Важно: удаляем или изменяем max-width в стилях каждого компонента,
+   чтобы они подстраивались под колонку сетки */
+.registration-form,
+.stopwatch,
+.list-filter,
+.modal-container,
+.theme-switcher-container {
+  /* max-width убираем или делаем 100%, чтобы они занимали всю ширину колонки */
+  max-width: 100%; /* Теперь каждый компонент будет заполнять свою ячейку */
+  margin: 0; /* Убираем auto margin, чтобы они не центрировались внутри ячейки */
+}
+
+/* Можете также убрать фон #f0f0f0 и границу из отдельных компонентов,
+   если хотим, чтобы они сливались с общим фоном страницы или просто были без своей "карточки" */
+.registration-form,
+.stopwatch,
+.list-filter,
+.modal-container,
+.theme-switcher-container {
+    /* background-color: transparent; */
+    /* border: none; */
+    /* box-shadow: none; */
+    padding: 15px; /* Сохраняем внутренние отступы */
+}
+
+/* Также может потребоваться настроить App-header h1, если он слишком большой */
+.App-header h1 {
+    margin-bottom: 20px;
 }

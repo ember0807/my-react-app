@@ -1,0 +1,23 @@
+.star-rating {
+  display: inline-block;
+  font-size: 2.5rem;
+  cursor: pointer;
+  user-select: none; /* Предотвращает выделение текста */
+}
+
+.star {
+  color: var(--text-color-dark); /* Неактивные звезды */
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.star.filled {
+  color: gold; /* Активные звезды */
+}
+
+.star:hover {
+  transform: scale(1.1);
+}
+
+.star:active {
+  transform: scale(0.9);
+}

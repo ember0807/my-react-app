@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход */
+}
+
+/* Светлая тема */
+body.light {
+  background-color: #f0f2f5; /* Светлый фон страницы */
+  color: #333; /* Темный текст */
+}
+
+/* Темная тема */
+body.dark {
+  background-color: #333; /* Темный фон страницы */
+  color: #f0f2f5; /* Светлый текст */
+}
+
+/* Адаптируем App-header для темной/светлой темы */
+.App-header {
+  /* Сохраняем общие свойства */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+/* Конкретные стили для App-header в светлой теме */
+body.light .App-header {
+  background-color: #282c34; /* Или более светлый фон, если хотите */
+  color: white;
+}
+
+/* Конкретные стили для App-header в темной теме */
+body.dark .App-header {
+  background-color: #1a1a1a; /* Очень темный фон */
+  color: #e0e0e0;
+}
+
+/* Адаптируем общие компоненты для темной/светлой темы */
+body.light .registration-form,
+body.light .stopwatch,
+body.light .list-filter,
+body.light .modal-container {
+    background-color: #fff;
+    border-color: #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+body.light .registration-form input,
+body.light .search-input,
+body.light .filtered-list {
+    background-color: #fff;
+    border-color: #ddd;
+    color: #333;
+}
+body.light .filtered-list li {
+    border-bottom-color: #eee;
+    color: #333;
+}
+body.light .no-results {
+    color: #666;
+}
+
+body.dark .registration-form,
+body.dark .stopwatch,
+body.dark .list-filter,
+body.dark .modal-container {
+    background-color: #444;
+    border-color: #555;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+body.dark .registration-form label,
+body.dark .stopwatch-display,
+body.dark .list-filter h2,
+body.dark .modal-container h2,
+body.dark .modal-content h3 {
+    color: #f0f2f5;
+}
+body.dark .registration-form input,
+body.dark .search-input,
+body.dark .filtered-list {
+    background-color: #555;
+    border-color: #666;
+    color: #e0e0e0;
+}
+body.dark .filtered-list li {
+    border-bottom-color: #666;
+    color: #e0e0e0;
+}
+body.dark .no-results {
+    color: #bbb;
+}
+body.dark .modal-content {
+  background-color: #333;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+body.dark .modal-content p {
+  color: #ccc;
+}

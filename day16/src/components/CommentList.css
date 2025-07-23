@@ -1,0 +1,67 @@
+.comment-list-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-md) 0;
+  background-color: var(--dark-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+}
+
+.comment-item {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.comment-item:last-child {
+  border-bottom: none;
+}
+
+.comment-author {
+  font-weight: bold;
+  color: var(--primary-accent);
+  margin-bottom: var(--spacing-xs);
+}
+
+.comment-text {
+  margin: var(--spacing-xs) 0;
+}
+
+.comment-date {
+  font-size: 0.85rem;
+  color: var(--text-color-dark);
+  text-align: right;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: var(--dark-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  width: 100%;
+  max-width: 700px;
+  box-sizing: border-box;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.comment-form button {
+  @extend .component-button;
+  background-color: var(--primary-accent);
+  color: var(--button-text);
+  align-self: flex-end;
+}

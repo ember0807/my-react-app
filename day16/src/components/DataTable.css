@@ -1,0 +1,42 @@
+.data-table-container {
+  width: 100%;
+  overflow-x: auto; /* Для адаптивности на маленьких экранах */
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--spacing-md);
+  background-color: var(--dark-surface);
+  border-radius: var(--border-radius);
+  overflow: hidden; /* Для применения border-radius к таблице */
+  box-shadow: var(--shadow-light);
+}
+
+.data-table th,
+.data-table td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+  background-color: #4a515f;
+  color: var(--primary-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #3f4654; /* Чередующийся фон строк */
+}
+
+.data-table tr:hover {
+  background-color: #555c6b;
+  transition: background-color 0.2s ease;
+}
+
+.data-table td {
+  color: var(--text-color-light);
+}

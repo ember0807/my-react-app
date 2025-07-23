@@ -1,0 +1,50 @@
+.breadcrumbs {
+  display: flex;
+  list-style: none;
+  padding: var(--spacing-sm);
+  margin: 0;
+  background-color: var(--dark-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.breadcrumbs-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs-item a {
+  text-decoration: none;
+  color: var(--primary-accent);
+  font-weight: 500;
+  padding: 0 var(--spacing-xs);
+  transition: color 0.2s ease;
+}
+
+.breadcrumbs-item a:hover {
+  color: var(--button-hover-bg);
+}
+
+.breadcrumbs-item span {
+  color: var(--text-color-dark);
+  margin: 0 var(--spacing-xs);
+}
+
+.breadcrumbs-item:last-child a {
+  color: var(--text-color-light);
+  cursor: default;
+}
+
+.breadcrumbs-item:last-child a:hover {
+  color: var(--text-color-light); /* Не меняем цвет для последнего элемента */
+}
+
+.breadcrumbs-item:not(:last-child) .separator::after {
+  content: '/';
+  color: var(--text-color-dark);
+  margin-left: var(--spacing-xs);
+}

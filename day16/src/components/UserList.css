@@ -1,0 +1,22 @@
+.user-list-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--dark-surface);
+  box-shadow: var(--shadow-light);
+  overflow: hidden; /* Важно для корректного отображения border-radius, если элементы не имеют собственного фона или имеют */
+}
+
+/* Можете добавить стиль для заголовка, если он есть */
+.user-list-container h2 {
+  color: var(--primary-accent);
+  margin-bottom: var(--spacing-md);
+}

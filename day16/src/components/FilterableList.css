@@ -1,0 +1,39 @@
+.filterable-list-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.filter-input {
+  width: calc(100% - var(--spacing-md) * 2);
+  margin-bottom: var(--spacing-lg);
+}
+
+.filterable-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm);
+  background-color: var(--dark-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+}
+
+.filterable-item-card {
+  background-color: #4a515f;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-xs);
+  text-align: center;
+  color: var(--text-color-light);
+}
+
+.filterable-item-card h4 {
+  margin: 0 0 var(--spacing-xs) 0;
+  color: var(--primary-accent);
+}
+
+.filterable-item-card p {
+  font-size: 0.9rem;
+  color: var(--text-color-dark);
+}

@@ -1,0 +1,56 @@
+.tree-accordion-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.tree-accordion-node {
+  margin-bottom: 5px;
+  /* padding-left будет добавляться инлайн в JSX */
+}
+
+.node-title {
+  display: flex;
+  align-items: center;
+  padding: 8px 5px;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: #5a5757;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  gap: 5px;
+}
+
+.node-title:hover {
+  background-color: #8a8686;
+}
+
+.node-toggle-icon {
+  margin-right: 5px;
+  font-size: 0.9em;
+  min-width: 15px; /* чтобы иконка не "прыгала" при смене */
+  color: #666;
+}
+
+.node-file-icon {
+    margin-left: auto; /* Отодвигает иконку файла вправо */
+    color: #888;
+}
+
+.node-content {
+  padding: 5px 10px 5px 30px; /* Отступ от края + дополнительный отступ */
+  font-size: 0.9em;
+  color: #555;
+  border-top: 1px dashed #eee;
+  margin-top: 5px;
+}
+
+.node-children {
+  /* Вложенные элементы будут получать свои отступы через paddingLeft */
+  margin-top: 5px; /* Небольшой отступ между родительским заголовком и дочерними элементами */
+}

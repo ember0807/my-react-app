@@ -1,0 +1,132 @@
+.custom-accordion-wrapper.light {
+  --bg-color: #f8f8f8;
+  --text-color: #333;
+  --item-bg: #fff;
+  --item-border: #e0e0e0;
+  --title-bg: #f7f7f7;
+  --title-hover-bg: #e9e9e9;
+  --content-text: #555;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --toggle-btn-bg: #007bff;
+  --toggle-btn-color: #fff;
+  --toggle-btn-hover-bg: #0056b3;
+  --no-results-color: #666;
+}
+
+.custom-accordion-wrapper.dark {
+  --bg-color: #282c34;
+  --text-color: #f0f0f0;
+  --item-bg: #3c414d;
+  --item-border: #50586b;
+  --title-bg: #4a515f;
+  --title-hover-bg: #5a6270;
+  --content-text: #ccc;
+  --input-bg: #4a515f;
+  --input-border: #5a6270;
+  --toggle-btn-bg: #61dafb;
+  --toggle-btn-color: #333;
+  --toggle-btn-hover-bg: #21a1f1;
+  --no-results-color: #bbb;
+}
+
+/* Основной контейнер обертки, который получает класс темы */
+.custom-accordion-wrapper {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 30px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  max-width: 650px;
+  margin: 20px auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Переопределяем стили для accordion-item внутри custom-accordion-wrapper
+   чтобы они использовали переменные темы */
+.custom-accordion-wrapper .accordion-container {
+    border: none; /* Убираем рамку общего контейнера */
+    box-shadow: none; /* Убираем тень общего контейнера */
+    background-color: transparent;
+}
+
+.custom-accordion-wrapper .accordion-item {
+  border: 1px solid var(--item-border);
+  background-color: var(--item-bg);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.custom-accordion-wrapper .accordion-item:last-child {
+  margin-bottom: 0; /* Убираем нижний отступ у последнего элемента */
+}
+
+.custom-accordion-wrapper .accordion-title {
+  background-color: var(--title-bg);
+  color: var(--text-color);
+  border-bottom: 1px solid var(--item-border); /* Рамка заголовка */
+}
+
+.custom-accordion-wrapper .accordion-title:hover {
+  background-color: var(--title-hover-bg);
+}
+
+.custom-accordion-wrapper .accordion-content-inner {
+  background-color: var(--item-bg);
+  color: var(--content-text);
+}
+
+.custom-accordion-wrapper .accordion-icon {
+  color: var(--content-text);
+}
+
+/* Стили для поля поиска */
+.search-input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 25px;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1em;
+  box-sizing: border-box; /* Включаем padding в общую ширину/высоту */
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: var(--content-text);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--toggle-btn-bg); /* Цвет рамки при фокусе */
+}
+
+/* Стили для кнопки переключения темы */
+.theme-toggle {
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  background-color: var(--toggle-btn-bg);
+  color: var(--toggle-btn-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--toggle-btn-hover-bg);
+}
+
+.no-results {
+    text-align: center;
+    padding: 20px;
+    color: var(--no-results-color);
+    font-style: italic;
+}

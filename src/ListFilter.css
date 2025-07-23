@@ -1,0 +1,46 @@
+.list-filter {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  width: calc(100% - 20px); /* Учитываем padding */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.filtered-list {
+  list-style: none;
+  padding: 0;
+  max-height: 200px; /* Ограничим высоту, чтобы был скролл */
+  overflow-y: auto; /* Скролл, если элементов много */
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.filtered-list li {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.filtered-list li:last-child {
+  border-bottom: none;
+}
+
+.no-results {
+  color: #666;
+  padding: 10px;
+  font-style: italic;
+}

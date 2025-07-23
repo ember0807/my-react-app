@@ -1,0 +1,33 @@
+.category-tree-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.category-list {
+  list-style: none;
+  padding-left: var(--spacing-lg);
+  margin: 0;
+}
+
+.category-item {
+  margin-bottom: var(--spacing-xs);
+  padding: var(--spacing-xs) 0;
+}
+
+.category-item-name {
+  font-weight: 500;
+  color: var(--text-color-light);
+  font-size: 1.1rem;
+}
+
+.category-item-name:hover {
+  color: var(--primary-accent);
+}
+
+.category-item .category-list {
+  padding-left: var(--spacing-lg); /* Отступ для вложенных категорий */
+  border-left: 1px dashed var(--border-color); /* Визуальный индикатор вложенности */
+  margin-top: var(--spacing-xs);
+}
