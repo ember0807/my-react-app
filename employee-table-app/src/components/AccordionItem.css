@@ -1,0 +1,51 @@
+.accordion-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #f7f7f7;
+  border: none;
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-header:hover {
+  background-color: #eee;
+}
+
+.accordion-icon {
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+.accordion-content {
+  padding: 15px 20px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+}
+
+.accordion-content p {
+  margin-top: 0;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.accordion-content pre {
+  background-color: #2d2d2d; /* Цвет фона для кода из темы prism-tomorrow */
+  color: #ccc; /* Цвет текста для кода */
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto; /* Горизонтальная прокрутка для длинного кода */
+}

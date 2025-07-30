@@ -30,8 +30,8 @@ const SortableAccordionItem = ({ item, index, activeIndex, handleToggle, id, isD
       <AccordionItem
         title={item.title}
         content={item.content}
-        isOpen={activeIndex === index}
-        onToggle={() => handleToggle(index)}
+        isOpen={activeIndex === item.id}
+        onToggle={() => handleToggle(item.id)}
         disableContentTransition={isDragging}
         // Можно передать свойство для отключения transition внутри AccordionItem
       />
@@ -44,8 +44,8 @@ const SortableAccordion = ({ initialItems }) => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [isDragging, setIsDragging] = useState(false); // Новое состояние для отслеживания перетаскивания
 
-  const handleToggle = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
+  const handleToggle = (id) => {
+    setActiveIndex(activeIndex === id ? null : id);
   };
 
   const handleDragStart = () => { // Обработчик начала перетаскивания
